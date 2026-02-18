@@ -1,7 +1,0 @@
-Application:
-
-Learned how multer is used to stae files like images. form data in postman
-
-Learned how to use mongoose to connect the sever to the database
-
-Cluster > Database > Collections : Post,UserDetail etc

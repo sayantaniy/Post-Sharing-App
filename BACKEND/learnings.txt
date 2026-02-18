@@ -1,0 +1,10 @@
+Application:
+
+Learned how multer is used to store files like images. form data in postman
+
+Learned how to use mongoose to connect the sever to the database
+
+Cluster > Database > Collections : Post,UserDetail etc
+
+First BACKEND is made, then frontend, then Backend dev makes documentation of the API's created then frontend developer integrates the two
+
