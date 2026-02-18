@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className='font-lexend'>
       <Routes>
-        <Route path='/' element={<Feed />} />
+        <Route path='/feed' element={<Feed />} />
         <Route path='/create-post' element={<Createpost />} />
       </Routes>
     </div>

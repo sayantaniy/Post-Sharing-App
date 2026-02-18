@@ -1,4 +1,23 @@
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 const Createpost = () => {
+
+    
+    const navigate = useNavigate()
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const formData = new FormData(e.target)
+
+        await axios.post('http://localhost:3000/createpost', formData).then((response)=>{
+            navigate('/feed')
+        }).catch((error)=>{
+            console.log(error)
+        })
+        
+        console.log(response.data)
+    }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-zinc-900 text-white px-4">
       <div className="w-full max-w-md bg-zinc-800 rounded-2xl p-6 shadow-lg">
@@ -6,7 +25,7 @@ const Createpost = () => {
           Create Post
         </h1>
 
-        <form className="flex flex-col gap-5">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           {/* Image Upload */}
           <label className="flex flex-col gap-2 text-sm text-zinc-300 border border-zinc-500 py-40 rounded-4xl p-6 items-center justify-center">
             Upload Image
